@@ -33,7 +33,7 @@ app.post('/api/shorturl', (req, res) => {
   const shortURL = urlCounter++; 
 
   if (!/^https?:\/\/[a-z]+/.test(originURL)) {
-    return res.status(400).json({error:"Invalid URL"});
+    return res.status(400).json({error: "invalid url"});
   }else{
     let currentURL = {
       "original_url": originURL,
